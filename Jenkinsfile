@@ -14,7 +14,7 @@ pipeline{
             steps{
                 echo "Production stage"
                 sh '''
-                    sudo ssh -i /var/lib/jenkins/broomsticks.pem -t -o StrictHostKeyChecking=no  ubuntu@ec2-44-204-68-161.compute-1.amazonaws.com
+                    sudo ssh -i /var/lib/jenkins/kanayo.pem -t -o StrictHostKeyChecking=no  ubuntu@ec2-44-204-68-161.compute-1.amazonaws.com
                     cd /var/www/
                     sudo pm2 kill
                     cd html

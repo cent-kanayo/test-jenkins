@@ -16,7 +16,7 @@ pipeline{
                 sh '''
                     sudo ssh -i /var/lib/jenkins/kanayo.pem -t -o StrictHostKeyChecking=no  ubuntu@ec2-44-204-68-161.compute-1.amazonaws.com
                     cd /var/www/
-                    sudo rm -f html
+                    sudo rm -rf html
                     sudo mkdir html
                     cd html
                     sudo git init
